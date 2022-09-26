@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script src="https://kit.fontawesome.com/01590d831d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <i class="fa-sharp fa-solid fa-house"></i>
+        </div>
+        <div class="search">
+            <input type="text" class="searchbox" placeholder="상품 검색">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            <hr/>
+        </div>
+        <div class="flexgrow"></div>
+        <div class="login">
+            <button class="loginBtn">
+                로그인
+            </button>
+        </div>
+    </div>
+    <div class="menubar">
+        <div class="menu">
+            <ul class="menuUl">
+                <li><i class="fa-sharp fa-solid fa-bars"></i></li>
+                <li>BEST</li>
+                <li>NEW</li>
+                <li>NECKLACE</li>
+                <li>RING</li>
+                <li>WATCH</li>
+            </ul>
+        </div>
+    </div>
+    <div class="picturebar"></div>
+    <div class="emptybar"></div>
+    <div class="pickbar">
+        <p class="mdpick">MD's Pick</p>
+    </div>
+    <div class="pickpicture">
+        <div class="pickHalfL">
+            <div class="person"></div>
+        </div>
+        
+        <div class="pickHalfR">
+            <div class="text">
+                <p class="textP">
+                    티르티르 22'FW MODERN TULY 컬렉션<br/>
+                    현대적인 모던, 시크 스타일의 비주얼을 지금 만나보세요
+                </p>
+            </div>   
+            <div class="mdItems">
+                <ul class="mdItemsList">
+                    <button id="btnLeft">
+                        
+                    </button >
+                    <li><img id="imgBox"></li>
+                    <button id="btnRight">
+                         
+                    </button >
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <p>공지사항</p>
+        <hr/>
+        <div class="creatorDiv">
+            <p class="creator1">Creators</p>     
+            <p class="creator2">크리에이터</p>
+            <p class="creator2">스몰비즈니스</p>
+        </div>
+        <div class="creatorDiv">
+            <p class="partners">Partners</p>    
+            <p class="creator2">비즈니스</p>
+            <p class="creator2">광고</p>
+            <p class="creator2">네이버 D2</p>
+        </div>
+        <div class="creatorDiv">
+            <p class="devlopers">Developsers</p> 
+            <p class="creator2">개발자 센터</p>
+            <p class="creator2">오픈 API</p>
+        </div>
+    </div>
+<script>
+    let bl = document.querySelector('#btnLeft');
+    let br = document.querySelector('#btnRight');
+    let imgBox = document.querySelector('#imgBox');
+    let count = 0;
+    
+    bl.onclick= function(){
+        let arr = ['../img/sub1.jpg','../img/sub2.jpg','../img/sub3.jpg'];
+        if(count<0){
+            count = 2;    
+        }
+        bl.style.backgroundImage="url("+arr[count]+")";
+        count--;
+    };
+    
+    br.onclick= function(){
+    let arr = ['../img/sub1.jpg','../img/sub2.jpg','../img/sub3.jpg'];
+    if(count>2){
+        count = 0;    
+    }
+    imgBox.style.backgroundImage="url("+arr[count]+")";
+    count++;
+    };
+
+
+    
+</script>
+</body>
+</html>
